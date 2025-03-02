@@ -1,1 +1,248 @@
 
+
+#-----page 11------
+In the second section, we will introduce fundamental Python concepts and operations relevant to computational physics. These topics are divided into two subsections:
+We will first discuss about Variables, Operations, and Functions
+Then we will introduce Modules, Packages, and Libraries
+#-----page 12------
+Variables are fundamental objects in computer programming. Essentially, a variable is a named storage location, that holds a value — think of it as a labeled box, where you can store data. 
+One key feature is that, variables can have their values changed or accessed as the program runs.
+---- Creating a variable in Python is as simple as assigning it a value. 
+For example, when you write: x = 1, you create a variable named x with the value of 1, an integer. when you write y=-1.0, you create a variable named y with a float number -1.0.
+----In Python, Variable names can only contain letters (a-z, A-Z), digits (0-9), and underscores (_). 
+---- The type of a variable in Python is determined by its assigned value. Python automatically recognizes the type when you're assigning a number, a string, or another type of data. 
+---- For instance: z = "hello" # creates a string type variable z, with the value of "hello" string.
+The statements below include more examples of variable assignments. 
+You can specify the data type of a variable, and assign multiple variables of different types in one line, like :
+  roll_no, marks, name = 10, 70, "Jesse"
+You can also check a variable's type using the type() function, and print it on your screen. 
+Remember, in Python, variables are dynamic, meaning their types can change during the course of the program—unlike in some other programming languages where variables have a fixed type.
+#-----page 13------
+Data types are a fundamental concept for working with variables and operations. The figure outlines the key built-in data types in Python, which can be categorized [ˈkætɪgəˌraɪzd] broadly into numbers, boolean/ ˈbuːliən /, set, dictionary, and sequence types. 
+ Let’s go over each of these in detail.
+---- First, we have numbers, which come in three forms in Python.
+Integers, like 2, 3, or 1, represent whole numbers.
+Floating-point numbers, such as 23.15, represent real numbers with decimal points.
+Complex numbers, like 1 + 3j, contain both a real and an imaginary part.
+These numerical types cover a wide range of cases used for calculations, from simple counting to advanced scientific operations.
+---- Second, Python includes the Boolean / ˈbuːliən /data type, which represents truth values. A Boolean variable can only hold one of two possible values: True or False. 
+This is particularly useful in logic-based operations and conditional statements.
+---- Next, there’s the Set data type. A set is an unordered collection of unique elements, listed in a pair of curly braces, for example, {2, 3, 5}. Sets automatically remove duplicates and are great for situations where you need to manage distinct items without worrying about their order.
+--- Next, dictionaries, which are incredibly [in'kredәbli] versatile in Python. A dictionary stores key-value pairs, for instance {1: "a", 2: "b"}, the dictionary has two key-value pairs: keys 1 and 2 with values of string "a" and "b", individually. 
+This allows you to efficiently look up a value using its key, which is especially helpful for organizing and retrieving [ri'tri:vng]  data.
+---- Finally, we come to Sequence Types, which include strings, lists, and tuples.
+A string is simply a sequence of characters, such as "Hello".
+A list is an ordered, mutable collection. Lists are flexible, and you can store elements of different data types, like [2, "a", 6.3].
+A tuple, on the other hand, is similar to a list but immutable, meaning it cannot be changed after it’s created. An example of a tuple would be (24, "c", 5.4). 
+Please note that different kinds of brackets are used to indicate different types of sequences. Strings are enclosed in quotation marks, either double or single quotes, lists use square brackets, while tuples use parentheses. Sets and Dictionaries use curly braces. 
+Having these diverse data types allows Python to handle many different kinds of data efficiently, making it a powerful and versatile language for computational physics and beyond.
+---- Now, here’s an interesting question to think about:
+Could all numerical values be represented using complex numbers?
+If we did this, we might simplify the variety of numerical types.
+But would this make computations simpler or harder? This is something to consider when evaluating the balance between simplicity and efficiency in programming.
+#-----page 14------
+When we use variables in Python, there are some rules and practices to keep in mind.
+---- First, Python is case-sensitive when it comes to variable names. For example, these three Variables are considered distinct and separate entities. 
+This means you need to be consistent with the case of the variables you define, to avoid confusion or errors.
+---- Second, unlike some other programming languages like C++, Python does not have a specific Constant type. However, there is a convention for declaring constants:
+Use uppercase letters in variable names, when you want to signify that the value should not be changed. 
+For instance, Q_ELE = 1.6E-19 is a typical way to declare a constant.
+Another approach is to use modules, such as importing a custom constant module or using the scipy.constants library, which provides a collection of physical and mathematical constants.
+These methods help maintain clarity and avoid unintentional changes to fixed values.
+---- Third, anything in Python that starts with a #(hash) is treated as a comment. 
+Comments are completely ignored by the Python interpreter, but they serve as helpful reminders or explanations for programmers.
+Including comments in your code is a good practice to make it more understandable to yourself and others.
+---- Finally, while Python's dynamic typing affords significant flexibility, it's generally best to maintain consistent variable types within a given scope. 
+Although you can reassign a variable to a different type, doing so within the same context may lead to confusion or errors.
+#-----page 15------
+Python provides us with a range of arithmetic operators that we’ll use extensively in our physics calculations and simulations.
+---- We have basic operations of addition with ’+’, subtraction with ’-’, multiplication using asterisk symbol ’*’, and division with forward slash ’/’.  These are straightforward and work as you’d expect.
+For exponentiation ['ekspәj,nenʃi'eiʃәn], we use ’double asterisk symbols **’. So, x**y raises x to the power of y. 
+---- An interesting operator is the integer division shown as double forward slashes ’//’. The result is set to be rounded down to the nearest integer of the simple division. 
+For example, the integer division of -14 by 3 is the round down integer of -4.66, thus gives us -5. Integer division can be handy when we need to work with discrete values or indices. ['indisi:z]
+---- As to the modulo['mɔdjulәu] operator, shown as the percentage symbol ’%’, it returns the remainder after division. 
+This is useful for cyclic ['saiklik] phenomena or when we need to check for even or odd numbers. For instance, n%2 is zero if n is even, and one if n is odd.
+---- It’s important to understand how these operators can combine with variables and assignments to perform powerful calculations.
+Lets see some Examples. 
+At the top, the variables a, b, and C are assigned values: 3, 5, and 8.0, respectively. Next, x is given with an expression. The example demonstrates how multiple operators can work together in a single line. 
+Here, the order of operations follows standard mathematical precedence [pri'si:dns]: exponents are evaluated first, then multiplication and division, and finally addition and subtraction.
+Next, look at x = x ** 2 + 2. This illustrates how variables can update their own value. The current value of x is squared and then incremented by 2.
+"print(a + b / c)" implements a direct calculation and outputs the result. This is an example of evaluating expressions within a print() statement — something very common in debugging or analyzing intermediate steps.
+In the bottom block, "x, y = 2 * z + 1, (x + y) / 3", shows Python’s ability to handle multiple variable assignments in one line. 
+This helps streamline code for solving coupled equations or iterative calculations in physics models.
+Finally, x, y = y, x swaps the values of x and y. In programming, this is an elegant and efficient way to replace the content of two variables without needing a temporary placeholder. 
+Python first evaluates the right side, creating a tuple with the current values of y and x. it then unpacks this tuple and assigns the values to the variables on the left side in order.
+#-----page 16------
+Python defines a serial of operations named "modifiers", which are short-hand ways to perform operations and assignments that involve updating a variable's value, in one step.
+These include Add and Assign (+=), Subtract and Assign(-=), Multiply and Assign(*=), Divide and Assign(/=), and Floor Division and Assign //=. 
+Each one combines an arithmetic operator with an assignment, eliminating the need for redundant typing.
+As shown by the examples, these modifiers are convenient for updating the value of a variable in place, thus can make our code more concise and readable, especially in iterative calculations such as updating positions, energies, and scaling a pressure, which are often used in computational physics.
+---- Regarding the end result of arithmetic operations.
+The type of the result depends on the most general type involved in the operation. 
+If you combine an integer with a floating-point number, or a floating-point with a complex number, the result will have the more general type. 
+For example:
+Integer + Float results in a Float.
+Float + Complex results in a Complex number.
+You can think of this as Python "promoting" the simpler data type to ensure no precision is lost. 
+This is particularly critical in physics, where losing precision during numerical computation could lead to incorrect conclusions.
+---- Here’s a reminder: division using the / operator always yields a floating-point result, even when the inputs are integers. Python automatically handles this conversion.
+#-----page 17------
+Now, let’s move forward to Boolean Operations, an essential concept in programming and decision-making processes in computational physics. 
+Boolean operations are the foundation for anything that involves logical control, such as comparisons, conditions, loops, and more.
+Boolean operations evaluate expressions and produce a Boolean value, which can only ever be one of two results: True or False
+As we’ll see, these operations allow us to answer questions like:
+Is one value greater than another?
+Is a condition met?
+Does an object exist in a container?
+Let’s explore each category.
+---- 1. Comparison Operators
+You’re probably familiar with many of these:
+Equality == asks, “Are these two values equal?”
+Comparisons like greater-than (>), less-than (<), and their variants (>=, <=).
+Inequality !=, an excla'mation mark followed by an equal mark,  checks if two values are not equal.
+For example:
+If we check whether 2 == 3, this returns False. If we say 5 > 3, this returns True. 
+These operators are heavily used in computational physics to compare values, like determining if a velocity exceeds a threshold or if the energy of a system has reached equilibrium.
+---- 2. Logical Operators: and, or, not. They can be used to combine or modify Boolean results.
+and: Returns True only if both conditions are True.
+For example: True and False produces False.
+In physics, you might use this to check if multiple constraints, like boundary conditions, are satisfied.
+or: Returns True if at least one condition is True.
+Example: True or False evaluates to True.
+We might use this to set up broader conditional scenarios.[si'nɑ:riәu]
+not: This negates [nɪˈgeɪts] the result. If a condition is True, not will turn it into False, and vice versa. Think of it as flipping the result.
+---- 3. For type casting with bool(), Python evaluates any non-zero number as True and 0 as False. For example, bool(17) results in True.
+---- 4. The next group includes membership operators — in and not in. These are used to check whether an item is present in a sequence.
+Here banana is included in the list of fruits. The operation gives True. 
+---- 5. Another special group operators are:  is and is not.
+These are used to check if two variables reference the same object in memory, not just their value. Hence, a is not b, but a equals b. 
+---- 6. Finally, we have bitwise operators. They operate directly on the binary representation of integers. 
+They may be less frequent in day-to-day physics programming but are critical for tasks such as low-level data manipulation and optimization.
+
+#-----page 18------
+Now lets introduce a key concept in programming: function. 
+A function is a block of code designed to perform a specific task.
+---- It is defined with a name, which allows us to call it and execute the same block of logic multiple times without rewriting it.
+In simple terms, a function acts like a machine: You give it some inputs, often called arguments. It performs the predefined task, and then it returns some values as the output.  
+Importantly, arguments and return values can be any type of data, such as numbers, strings, lists, or even other functions.
+---- In Python, indentation defines code blocks. Every line inside a function must be indented consistently to show they belong to that function.
+---- There is an example function named calculate_energy, in which mass and velocity are the arguments.
+energy=0.5 * mass * velocity ** 2 i s the calculation.
+The result of the calculated kinetic energy, is the returned value. 
+Imagine we’re solving a problem that involves the motion of particles using Newtonian mechanics. 
+If we have 100 particles, we’ll need to  compute their position, velocity, and acceleration at every timestep.
+Without functions, you’d have to repeat the same calculations over and over again in your code.
+With functions, we can define a block of code once to handle these calculations, then call the function whenever we need it. 
+This boosts efficiency and scalability, especially for simulations involving thousands or millions of iterations. Obviously, functions improve readability by eliminating redundancy in code. 
+They allow us to break down programs into smaller, manageable components.
+---- Python provides many built-in functions to make programming faster. These are pre-defined functions that you don’t need to write yourself.
+Let me highlight a few of them:
+type(): This function tells you the data type of a variable. For example, if you write type(10), it will return <class 'int'>.
+range(): Returns a sequence of numbers. For example, range(5) produces numbers from 0 to 4. This is especially useful for loops or repetitive[ri'petitiv]  tasks.
+eval(): Evaluates an expression stored as a string. For example, eval("2 + 3") will return 5. However, you should use this function cautiously due to potential security risks.
+id(): Retrieves[riˈtri:vz] the memory address of an object. This helps us understand how objects are stored and managed in memory.
+We will discuss print() and input() as interactive functions, in the next slide. 
+These built-in functions are like "ready-to-use tools" that cover a wide variety of tasks. 
+#-----page 19------
+Now let’s focus on interactive functions, print() and input(). Both of these are foundational tools in programming and help us interact with users or display.
+---- The print() function outputs information to the console [kәn'sәul].
+Think of it as your program’s way of “talking” to you — it displays the current values of variables or the results of expressions when the statement is executed.
+---- In the first example:
+x and y are integers 1 and 2, z is a complex number. By calling print(x), we simply output the value of x, which is 1.
+with print(x, z, x+y) , the computer will output multiple values at once, side by side, separated by spaces.
+in the script of print('The value of x is', x, 'and the value of y is', y)  
+We add a descriptive string alongside the variable values. 
+This demonstrates how we can mix text strings with variable values to create meaningful, readable output.
+In scientific computing, print() statements are crucial for diagnostics [,daig^'nɔstiks], and data analysis. For example, when running a simulation, we can print key variables at every time step to verify accuracy or track the system's behavior over time.
+---- The input() function makes your program to pause execution, and ask the user a question or prompts them for a response, and then stores their input as a string. 
+This allows your program to dynamically adapt based on user-provided data.
+---- The first example is simply, x = input()
+Here, the program will wait until the user types a string into the console[kәn'sәul]. The value they type is then stored in the variable x as a string.
+with y = input("please input y: ") 
+The program displays the message "please input y:" to guide the user. Whatever the user types is saved in y. 
+In fact, even though the user typed a number, the value stored in y is a string, not an integer.
+We can combine input() with the float() function, to convert the value entered by the user from a string into a floating-point number. 
+If we enters 3.14, it will be stored in z as a floating-point number.
+The program will then print: The value of z is 3.14, its type is <class 'float'>
+In computational physics, print() is often used in Tracking Parameters, such as energy, position at each step in a Simulation. 
+The print() function is your tool for showing results, debugging  and fine-tuning your code. Combine print() with formatted strings to produce human-readable results from large-scale computations, making it easier to interpret output.
+Input(), brings interactivity , allows the user to provide custom data — just remember it always returns a string, so you may need to convert it using functions like int() or float().
+
+#-----page 20------
+Defining your own functions is one of the most powerful features of Python and enables you to write modular, efficient, and reusable code.This not only saves time but also makes your code cleaner and easier to debug.
+---- The first code block shows the general structure of a user-defined function in Python.
+The keyword def is used to define the function, followed by the function name. You can choose any meaningful name, like distance or calculate_force, just like the name of a variable, depending on the task.
+Inside the parentheses[pә'renθisi:s], you list your parameters — these represent the inputs required by the function, and can be one or more.
+The indented block is called the function body. This is where you write the logic or calculations that the function should perform.
+The return statement specifies what the function should give back as output to the program, once it finishes executing.
+---- The example below is a custom function to calculate the distance of a point in a cylindrical coordinate system to the origin point. 
+The function takes three inputs:
+r: the radial distance,
+theta: the angular coordinate in radians,
+z: the height along the Cartesian z-axis.
+The function converts the cylindrical coordinates to Cartesian[kɑ:'ti:ziәn] coordinates x and y. Next, it computes the distance, d. of the point from the origin.
+After calculations, the function returns all four values: x,y,z, and d. These outputs can then be used for further processing.
+Finally, the function is called using its name, with parameters, the output values x,y,z, and d are assigned to variables x1,y1,z1, and d1 for later use.
+---- In a function, local variables, like x, y, and d shown in the example, are only defined inside the function. 
+They are temporary and exist only while the function is being executed. Once the function finishes running, these variables are discarded, and their memory is freed.
+This is important because it keeps the calculations isolated and prevents unintended modifications to the rest of your program.
+For example: The variable x inside the distance function has no relationship with any variable named x defined elsewhere in your program.
+---- Functions don’t always have to return values. They can simply perform a task, like printing results or modifying data, without giving anything back to the main program.
+---- In programming, there’s a principle called the DRY Principle — “Don’t Repeat Yourself.” 
+When solving physics problems or writing simulations, you’ll often find yourself performing repetitive calculations. 
+Instead of copying and pasting the same block of code throughout your program, we should define a function and reuse it wherever needed. This not only saves time but also makes your code cleaner and easier to debug.
+#-----page 21------
+One of Python's greatest strengths is its modularity. Based on the size and organization of modular components, Python categorizes them as: module, package and library. 
+---- A modules is a individual Python file, with a .py extension, containing collections of functions and global variables. 
+If you want to reuse a function or a variable across multiple programs, you can place them into a module and import it into other programs as needed.
+---- A packages is a directory containing multiple related modules, structured with a special file called __init__.py. 
+---- NumPy package for core scientific calculations is a good example. It organizes related modules including the powerful N-dimensional array object (ndarray), array manipulation tools, and fundamental mathematical operations (such as linear algebra, Fourier transforms, random number generation).
+---- Libraries are larger collections of modules and packages designed for specific tasks, such as SicPy for scientific computing or Matplotlib for visualization. 
+---- SciPy is designed as an extension of NumPy, adding more advanced functionality for scientific applications. It uses NumPy’s array structure and provides higher-level tools such as integration, interpolation[in.tә:pәu'leiʃәn], statistics, optimization, and more.
+---- Matplotlib is a popular Python library for creating static, animated, and interactive visualizations. It provides a flexible and easy-to-use interface to generate plots, charts, and graphs.
+----  In Python, the terms library, package, and module are sometimes used interchangeably, as the distinction isn’t always critical.
+#-----page 22------
+Let’s take a look at the structure of an example package named “functions”. 
+---- Here the directory acting as the container for its modules is named as ‘functions’. 
+It includes two Python files: simple_math.py for math-related functions, and simple_string.py for string-related functions. 
+Additionally, the directory contains an __init__.py file, which is required for Python to recognize the directory as a package.
+Inside this package:
+The file simple_math.py contains mathematical functions like:
+addition(), subtraction(), multiplication(), division()
+The file simple_string.py handles string-related operations like:
+concatenation()[.kɒnkæti'neiʃәn] , findLength()
+--- A great example of a real package is Python’s built-in math package.
+It contains a variety of mathematical functions that you can use directly. As shown here. 
+#-----page 23------
+How to bring functionality from modules, packages, or libraries into our program?
+We have the import statement and the dot syntax to navigate through packages and sub-packages.
+---- In the first example, we see three ways to import from the built-in math package.
+we can import a single function, or multiple functions, or everything of the package at once. 
+Actually, to make your code clear and easy to read, it is discouraged to import all functions together. 
+---- The dot syntax allows us to navigate through hierarchical[,haiә'rɑ:kikәl]  structures in larger packages.
+In the example, numpy.linalg is a sub-package of the NumPy library, focusing on linear algebra. We’re directly importing the inv() function, which calculates the inverse of a matrix.
+Alternatively, we can import the entire sub-package. You then use the dot syntax to access the inv() function explicitly with numpy.linalg.inv().
+---- Renaming libraries is particularly useful when the library name is long or frequently used in your script. 
+In the example  import numpy as np , The alias np is the convention for NumPy and is recognized by most Python users. Another example, matplotlib.pyplot is commonly shortened to plt.
+#-----page 24------
+Now, let’s tackle a simple practical problem to convert a point in polar coordinates (r,θ) into Cartesian[kɑ:'ti:ziәn] coordinates (x,y).
+A point in polar coordinates is represented using two values:
+r: the radial distance, measured in meters. 
+θ: the angle, measured in degrees.
+Our goal is to take input values for r and θ, convert θ from degrees to radians, and then calculate the corresponding x,y values in Cartesian form. 
+We’ll do this using Python’s math module to handle trigonometric [.trigәnә'metrik] calculations.
+---- The flowchart on the left-hand side breaks the process into logical steps:
+Start the program.
+Ask the user to input the values of r and θ.
+Convert θ from degrees to radians since trigonometric functions in Python work with radians.
+Use the formulas x=r⋅cos(θ) and y=r⋅sin(θ) to calculate the Cartesian coordinates.
+Print the results in a readable format and end the program.
+You can plot the flowchart with draw.io app or mermaid scripts. See the websites for more details. 
+---- Now, let's look at the Python codes shown on the rightside:
+we are importing only the necessary functions: sin, cos, and pi from the math module, which keeps the code lightweight and efficient.
+We cast input values using float() to ensure they are numeric. Then do the calculations as indicated in the flowchart. 
+This simple, direct approach, is perfect for one-time calculations or small scripts.
+---- You can also create a function called polar_to_cartesian() for better modularity and reusability as shown below.
+========End of Part 1.  =========================
+
+ 
